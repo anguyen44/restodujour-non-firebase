@@ -1,13 +1,42 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, Navigator} from 'react-native';
+
+import Search from './component/Search';
 
 export default function App() {
+
+ /* renderScene(route, navigator) {
+    var globalProps = {navigator}
+    switch(route.id){
+      case 'Search': 
+        return (
+          <Search />
+        )
+    }
+  }
+
+    return (
+      <Navigator 
+        initialRoute={{
+          id: 'Serach'
+        }}
+        renderScene={this.renderScene}
+      />
+    );
+*/
+ 
   return (
-    <View style={styles.container}>
+    <Search/>
+    /*<View style={styles.container}>
+      
       <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+    </View>*/
+ );
 }
+
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -17,3 +46,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+AppRegistry.registerComponent('App', () => App);
